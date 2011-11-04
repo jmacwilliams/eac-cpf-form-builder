@@ -1,0 +1,330 @@
+<?xml version="1.0"?>
+<definition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2">
+    <properties>
+        <root_name>eac-cpf</root_name>
+        <schema_uri>http://eac.staatsbibliothek-berlin.de/schema/cpf.xsd</schema_uri>
+        <namespaces default="urn:isbn:1-931666-33-4">
+            <namespace prefix="xsi">http://www.w3.org/2001/XMLSchema-instance</namespace>
+            <namespace prefix="link">http://www.w3.org/1999/xlink</namespace>
+        </namespaces>
+    </properties>
+    <form>
+        <properties>
+            <type>form</type>
+            <access>TRUE</access>
+            <attributes>
+                <schemaLocation>urn:isbn:1-931666-33-4 http://eac.staatsbibliothek-berlin.de/schema/cpf.xsd</schemaLocation>
+                <enctype>multipart/form-data</enctype>
+            </attributes>
+            <required>FALSE</required>
+            <tree>TRUE</tree>
+        </properties>
+        <children>
+            <element name="hidden">
+                <properties>
+                    <type>hidden</type>
+                    <access>TRUE</access>
+                    <default_value>hiddenValue</default_value>
+                    <required>FALSE</required>
+                    <tree>TRUE</tree>
+                    <actions>
+                        <create>
+                            <path>/eac-cpf:eac-cpf</path>
+                            <context>document</context>
+                            <schema>http://www.w3.org/2001/XMLSchema-instance</schema>
+                            <type>attribute</type>
+                            <prefix>urn</prefix>
+                            <value>urn:isbn:1-931666-33-4 http://eac.staatsbibliothek-berlin.de/schema/cpf.xsd</value>
+                        </create>
+                        <read/>
+                        <update/>
+                        <delete/>
+                    </actions>
+                </properties>
+                <children/>
+            </element>
+            <element name="control">
+                <properties>
+                    <type>markup</type>
+                    <access>TRUE</access>
+                    <required>FALSE</required>
+                    <tree>TRUE</tree>
+                    <actions>
+                        <create>
+                            <path/>
+                            <context>document</context>
+                            <schema/>
+                            <type>element</type>
+                            <prefix/>
+                            <value>control</value>
+                        </create>
+                        <read/>
+                        <update/>
+                        <delete/>
+                    </actions>
+                </properties>
+                <children>
+                    <element name="recordId">
+                        <properties>
+                            <type>textfield</type>
+                            <access>TRUE</access>
+                            <multiple>TRUE</multiple>
+                            <required>FALSE</required>
+                            <title>Record ID</title>
+                            <tree>TRUE</tree>
+                        </properties>
+                        <children/>
+                    </element>
+                    <element name="maintenanceStatus">
+                        <properties>
+                            <type>textfield</type>
+                            <access>TRUE</access>
+                            <required>FALSE</required>
+                            <title>Maintenance Status</title>
+                            <tree>TRUE</tree>
+                        </properties>
+                        <children/>
+                    </element>
+                    <element name="maintenanceAgency">
+                        <properties>
+                            <type>textfield</type>
+                            <access>TRUE</access>
+                            <required>FALSE</required>
+                            <title>Maintenance Agency</title>
+                            <tree>TRUE</tree>
+                        </properties>
+                        <children/>
+                    </element>
+                    <element name="maintenanceHistory">
+                        <properties>
+                            <type>tabs</type>
+                            <access>TRUE</access>
+                            <required>FALSE</required>
+                            <title>Maintenance History</title>
+                            <tree>TRUE</tree>
+                        </properties>
+                        <children>
+                            <element name="maintenanceEvent">
+                                <properties>
+                                    <type>tabpanel</type>
+                                    <access>TRUE</access>
+                                    <multiple>TRUE</multiple>
+                                    <required>FALSE</required>
+                                    <title>Event</title>
+                                    <tree>TRUE</tree>
+                                </properties>
+                                <children>
+                                    <element name="eventType">
+                                        <properties>
+                                            <type>textfield</type>
+                                            <access>TRUE</access>
+                                            <required>FALSE</required>
+                                            <title>Type</title>
+                                            <tree>TRUE</tree>
+                                        </properties>
+                                        <children/>
+                                    </element>
+                                    <element name="eventDateTime">
+                                        <properties>
+                                            <type>date</type>
+                                            <access>TRUE</access>
+                                            <required>FALSE</required>
+                                            <title>Date/Time</title>
+                                            <tree>TRUE</tree>
+                                        </properties>
+                                        <children/>
+                                    </element>
+                                    <element name="agentType">
+                                        <properties>
+                                            <type>textfield</type>
+                                            <access>TRUE</access>
+                                            <required>FALSE</required>
+                                            <title>Agent Type</title>
+                                            <tree>TRUE</tree>
+                                        </properties>
+                                        <children/>
+                                    </element>
+                                    <element name="agent">
+                                        <properties>
+                                            <type>textfield</type>
+                                            <access>TRUE</access>
+                                            <required>FALSE</required>
+                                            <title>Agent Name</title>
+                                            <tree>TRUE</tree>
+                                        </properties>
+                                        <children/>
+                                    </element>
+                                    <element name="eventDescription">
+                                        <properties>
+                                            <type>textfield</type>
+                                            <access>TRUE</access>
+                                            <required>FALSE</required>
+                                            <title>Description</title>
+                                            <tree>TRUE</tree>
+                                        </properties>
+                                        <children/>
+                                    </element>
+                                </children>
+                            </element>
+                        </children>
+                    </element>
+                </children>
+            </element>
+            <element name="cfpDescription">
+                <properties>
+                    <type>fieldset</type>
+                    <access>TRUE</access>
+                    <required>FALSE</required>
+                    <title>cfp Description</title>
+                    <tree>TRUE</tree>
+                </properties>
+                <children>
+                    <element name="identity">
+                        <properties>
+                            <type>fieldset</type>
+                            <access>TRUE</access>
+                            <required>FALSE</required>
+                            <title>Identity</title>
+                            <tree>TRUE</tree>
+                        </properties>
+                        <children>
+                            <element name="entityType">
+                                <properties>
+                                    <type>textfield</type>
+                                    <access>TRUE</access>
+                                    <attributes>
+                                        <localType>primary</localType>
+                                    </attributes>
+                                    <required>FALSE</required>
+                                    <title>Entity Type</title>
+                                    <tree>TRUE</tree>
+                                </properties>
+                                <children/>
+                            </element>
+                            <element name="nameEntry">
+                                <properties>
+                                    <type>tabs</type>
+                                    <access>TRUE</access>
+                                    <multiple>TRUE</multiple>
+                                    <required>FALSE</required>
+                                    <title>Name</title>
+                                    <tree>TRUE</tree>
+                                </properties>
+                                <children>
+                                    <element name="0">
+                                        <properties>
+                                            <type>tabpanel</type>
+                                            <access>TRUE</access>
+                                            <required>FALSE</required>
+                                            <tree>TRUE</tree>
+                                        </properties>
+                                        <children>
+                                            <element name="part">
+                                                <properties>
+                                                    <type>textfield</type>
+                                                    <access>TRUE</access>
+                                                    <attributes>
+                                                        <localType/>
+                                                    </attributes>
+                                                    <multiple>TRUE</multiple>
+                                                    <required>FALSE</required>
+                                                    <tree>TRUE</tree>
+                                                </properties>
+                                                <children/>
+                                            </element>
+                                        </children>
+                                    </element>
+                                </children>
+                            </element>
+                        </children>
+                    </element>
+                    <element name="description">
+                        <properties>
+                            <type>fieldset</type>
+                            <access>TRUE</access>
+                            <required>FALSE</required>
+                            <title>Description</title>
+                            <tree>TRUE</tree>
+                        </properties>
+                        <children>
+                            <element name="existDates">
+                                <properties>
+                                    <type>fieldset</type>
+                                    <access>TRUE</access>
+                                    <required>FALSE</required>
+                                    <title>Dates</title>
+                                    <tree>TRUE</tree>
+                                </properties>
+                                <children>
+                                    <element name="fromDate">
+                                        <properties>
+                                            <type>date</type>
+                                            <access>TRUE</access>
+                                            <required>FALSE</required>
+                                            <title>From</title>
+                                            <tree>TRUE</tree>
+                                        </properties>
+                                        <children/>
+                                    </element>
+                                    <element name="toDate">
+                                        <properties>
+                                            <type>date</type>
+                                            <access>TRUE</access>
+                                            <required>FALSE</required>
+                                            <title>To</title>
+                                            <tree>TRUE</tree>
+                                        </properties>
+                                        <children/>
+                                    </element>
+                                </children>
+                            </element>
+                            <element name="occupation">
+                                <properties>
+                                    <type>fieldset</type>
+                                    <access>TRUE</access>
+                                    <required>FALSE</required>
+                                    <title>Occupation</title>
+                                    <tree>TRUE</tree>
+                                </properties>
+                                <children>
+                                    <element name="term">
+                                        <properties>
+                                            <type>textfield</type>
+                                            <access>TRUE</access>
+                                            <required>FALSE</required>
+                                            <title>Term</title>
+                                            <tree>TRUE</tree>
+                                        </properties>
+                                        <children/>
+                                    </element>
+                                </children>
+                            </element>
+                            <element name="biogHist">
+                                <properties>
+                                    <type>textarea</type>
+                                    <access>TRUE</access>
+                                    <field_prefix>&lt;p&gt;</field_prefix>
+                                    <field_suffix>&lt;/p&gt;</field_suffix>
+                                    <required>FALSE</required>
+                                    <title>Biographical History</title>
+                                    <tree>TRUE</tree>
+                                </properties>
+                                <children/>
+                            </element>
+                        </children>
+                    </element>
+                </children>
+            </element>
+            <element name="submit">
+                <properties>
+                    <type>submit</type>
+                    <access>TRUE</access>
+                    <required>FALSE</required>
+                    <tree>TRUE</tree>
+                    <value>Submit</value>
+                </properties>
+                <children/>
+            </element>
+        </children>
+    </form>
+</definition>
