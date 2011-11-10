@@ -1,2 +1,3 @@
-An early attempt at a Form Builder definition for eac-cpf records
-`
+An early version of a Form Builder definition for eac-cpf records
+The schema definition can be found http://eac.staatsbibliothek-berlin.de/Diagram/cpf.html
+And a validation tool can be found http://tools.decisionsoft.com/schemaValidate/index.jsp
